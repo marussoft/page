@@ -1,0 +1,39 @@
+{
+    "name": "marussia/pages",
+    "description": "Marussia static pages",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "page"
+    ],
+    "authors": [
+        {
+            "name": "Mikhail Ilinsky",
+            "email": "mail@milinsky.ru"
+        }
+    ],
+    "support": {
+        "docs": "https://docs.marussia.org/pages/"
+    },
+    "require": {
+        "php": "^7.2",
+        "marussia/content-field": "^1.0",
+        "marussia/collection":"^1.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Marussia\\Pages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marussia\\Pages\\Test\\": ["tests/"]
+        }
+    },
+    "require-dev": {
+        "marussia/content-field": "^1.0",
+        "phpunit/phpunit": "^8.4",
+        "mockery/mockery": "^1.2"
+    }
+}
