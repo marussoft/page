@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "page"
+        "pages"
     ],
     "authors": [
         {
@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2",
         "marussia/content-field": "^1.0",
-        "marussia/collection":"^1.0"
+        "marussia/collection": "^1.0"
     },
     "minimum-stability": "dev",
     "autoload": {
