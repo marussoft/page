@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\TableBuilders;
+namespace Marussia\Pages\TableBuilders;
 
 class PageBuilder
 {
@@ -80,14 +80,14 @@ class PageBuilder
     public function createFieldValue(string $pageName, string $fieldName, array $dataType) : bool
     {
         $valuesTableName = $this->makeValuesTableName($pageName);
-        
+
         $type = $this->prepareType($dataType);
-        
+
         $sql = 'ALTER TABLE ' . $valuesTableName . ' ' .
                'ADD COLUMN IF NOT EXISTS ' . $fieldName . ' ' . $type;
-               
+
         $result = $this->pdo->prepare($sql);
-               
+
         return $result->execute() > 0;
     }
 }

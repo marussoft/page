@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Page\Actions;
+namespace Marussia\Pages\Actions;
 
-use Marussia\Page\TableBuilders\PageBuilder;
+use Marussia\Pages\TableBuilders\PageBuilder;
 use Marussia\ContentField\Actions\GetFieldDataTypeAction;
 
 class CreatePageFieldValue

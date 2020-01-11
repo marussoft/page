@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Page\Actions;
+namespace Marussia\Pages\Actions;
 
-use Marussia\Page\Repositories\PageRepository;
-use Marussia\Paget\Page;
+use Marussia\Pages\Repositories\PageRepository;
+use Marussia\Pages\Page;
 
 class AddPageValuesAction
 {

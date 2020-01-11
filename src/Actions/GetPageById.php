@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Actions;
+namespace Marussia\Pages\Actions;
 
-use Marussia\Content\Repositories\PageRepository;
-use Marussia\Content\Actions\Providers\FillFieldProvider as ActionProvider;
-use Marussia\Content\Content;
-use Marussia\Content\ContentBuilder;
+use Marussia\Pages\Repositories\PageRepository;
+use Marussia\Pages\Actions\Providers\FillFieldProvider as ActionProvider;
+use Marussia\Pages\Content;
+use Marussia\Pages\ContentBuilder;
 use Marussia\Contracts\ActionInterface;
 
 class GetPageByIdAction extends AbstractAction implements ActionInterface
@@ -56,7 +56,7 @@ class GetPageByIdAction extends AbstractAction implements ActionInterface
         $contentData['slug'] = $page->slug;
         $contentData['is_active'] = $page->isActive;
         $contentData['options'] = $page->options;
-        
+
         return $this->contentBuilder->createContent($contentData);
     }
 

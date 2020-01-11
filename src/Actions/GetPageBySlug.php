@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Marussia\Pages\Actions;
 
-use Marussia\Pages\Actions\Providers\FillFieldProvider as ActionProvider;
+use Marussia\Pages\Actions\Bundles\FillFieldProvider as ActionBundle;
 use Marussia\Pages\Repositories\PageRepository;
 use Marussia\Pages\Content;
 use Marussia\Pages\ContentBuilder;
@@ -14,17 +14,17 @@ class GetPageBySlugAction extends AbstractAction implements ActionInterface
 {
     private $repository;
 
-    private $actionProvider;
+    private $actionBundle;
 
     private $contentBuilder;
 
     private $slug;
 
-    public function __construct(PageRepository $repository, ActionProvider $actionProvider, ContentBuilder $contentBuilder)
+    public function __construct(PageRepository $repository, ActionBundle $actionBundle, ContentBuilder $contentBuilder)
     {
         $this->repository = $repository;
         $this->contentBuilder = $contentBuilder;
-        $this->actionProvider = $actionProvider;
+        $this->actionBundle = $actionBundle;
     }
 
     public function execute() : ?Content
@@ -47,12 +47,12 @@ class GetPageBySlugAction extends AbstractAction implements ActionInterface
         foreach ($fieldsValues as $fieldName => $value) {
 
             if ($fields->has($fieldName)) {
-                $fieldData = $this->actionProvider->createFieldData($fields->get($fieldName));
+                $fieldData = $this->actionBundle->createFieldData($fields->get($fieldName));
                 $fieldData->value = $value;
-                $contentData[$fieldName] = $this->actionProvider->fillField($fieldData);
+                $contentData[$fieldName] = $this->actionBundle->fillField($fieldData);
                 continue;
             }
-            $contentData[$fieldName] = $this->actionProvider->createFieldWithoutHandler($fieldName, $value);
+            $contentData[$fieldName] = $this->actionBundle->createFieldWithoutHandler($fieldName, $value);
         }
 
         $contentData['id'] = $page->id;

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Actions;
+namespace Marussia\Pagest\Actions;
 
-use Marussia\Content\Repositories\PageRepository;
+use Marussia\Pages\Repositories\PageRepository;
 use Marussia\Contracts\ActionInterface;
-use Marussia\Content\Collection;
+use Marussia\Collection;
 
 class GetPageListAction extends AbstractAction implements ActionInterface
 {

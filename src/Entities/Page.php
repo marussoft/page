@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Entities;
+namespace Marussia\Pages\Entities;
 
 class Page
 {
@@ -13,7 +13,7 @@ class Page
     public $title;
 
     public $slug;
-    
+
     public $isActive;
 
     public $options = [];

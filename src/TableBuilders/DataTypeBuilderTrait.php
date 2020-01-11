@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\TableBuilders;
+namespace Marussia\Pages\TableBuilders;
 
-use Marussia\Content\Exceptions\UnknownColumnDataTypeException;
+use Marussia\Pages\Exceptions\UnknownColumnDataTypeException;
 
 trait DataTypeBuilderTrait
 {

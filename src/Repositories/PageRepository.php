@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Repositories;
+namespace Marussia\Pages\Repositories;
 
-use Marussia\Content\Content;
-use Marussia\Content\Collection;
-use Marussia\Content\PageFactory;
-use Marussia\Content\Entities\Page;
-use Marussia\Content\TableBuilders\NameBuilderTrait;
+use Marussia\Pages\Content;
+use Marussia\Pages\Collection;
+use Marussia\Pages\PageFactory;
+use Marussia\Pages\Entities\Page;
+use Marussia\Pages\TableBuilders\NameBuilderTrait;
 
 class PageRepository
 {
@@ -168,19 +168,19 @@ class PageRepository
             foreach ($rawData as $data) {
 
                 $valuesTable = $this->makeValuesTableName($data['name']);
-                
+
                 $titleQuery = 'SELECT title FROM ' . $valuesTable . ' WHERE language = :language';
-                
+
                 $titleResult = $this->pdo->prepare($titleQuery);
-                
+
                 $titleResult->bindValue(':language', $language);
-                
+
                 $titleResult->execute();
-                
+
                 $data['title'] = $titleResult->fetchColumn();
-                
+
                 $page = $this->pageFactory->createFromArray($data);
-                
+
                 $collection->set($page->name, $page);
             }
         }

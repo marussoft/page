@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content;
+namespace Marussia\Pages;
 
 class ContentList
 {

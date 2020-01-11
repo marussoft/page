@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Page\Actions;
+namespace Marussia\Pages\Actions;
 
-use Marussia\Page\TableBuilders\PageBuilder;
-use Marussia\Page\Repositories\PageRepository;
-use Marussia\Page\PageFactory;
-use Marussia\Page\Exceptions\CreatePageActionException;
-use Marussia\Page\Exceptions\SlugInvalidCharactersException;
-use Marussia\Page\PageBuilder;
+use Marussia\Pages\TableBuilders\PageBuilder;
+use Marussia\Pages\Repositories\PageRepository;
+use Marussia\Pages\PageFactory;
+use Marussia\Pages\Exceptions\CreatePageActionException;
+use Marussia\Pages\Exceptions\SlugInvalidCharactersException;
+use Marussia\Pages\PageBuilder;
 
 class CreatePage
 {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Actions;
+namespace Marussia\Pages\Actions;
 
-use Marussia\Content\TableBuilders\PageBuilder;
-use Marussia\Content\Exceptions\CreatePageTableActionException;
+use Marussia\Pages\TableBuilders\PageBuilder;
+use Marussia\Pages\Exceptions\CreatePageTableActionException;
 
 class CreatePagesTableAction
 {
     private $builder;
-    
+
     public function __construct(PageBuilder $builder)
     {
         $this->builder = $builder;

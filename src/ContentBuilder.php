@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content;
+namespace Marussia\Pages;
 
-use Marussia\Content\Content;
+use Marussia\Pages\Content;
 
 class ContentBuilder
 {

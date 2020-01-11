@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content;
+namespace Marussia\Pages;
 
-use Marussia\Content\Entities\Page;
+use Marussia\Pages\Entities\Page;
 
 class PageFactory
 {
@@ -18,7 +18,7 @@ class PageFactory
 
         return $page;
     }
-    
+
     public function createFromArray(array $data) : Page
     {
         $page = new Page;

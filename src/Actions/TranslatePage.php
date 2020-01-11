@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Marussia\Content\Actions;
+namespace Marussia\Pages\Actions;
 
 use Marussia\Contracts\ActionInterface;
-use Marussia\Content\Repositories\PageRepository;
+use Marussia\Pages\Repositories\PageRepository;
 use Marussia\ContentField\Actions\GetFieldWithoutHandler;
 use Marussia\ContentField\Actions\CreateFieldDataAction;
-use Marussia\Content\Content;
-use Marussia\Content\ContentBuilder;
+use Marussia\Pages\Content;
+use Marussia\Pages\ContentBuilder;
 
 class TranslatePageAction extends AbstractAction implements ActionInterface
 {
